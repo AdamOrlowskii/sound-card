@@ -105,16 +105,7 @@ namespace up1_karta_dzwiekowa
         {
             mciSendString("pause sound", null, 0, IntPtr.Zero);
         }
-        //-------------------------- WaveOutWrite --------------------------------
-        private void btnWaveOutStart_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnWaveOutStop_Click(object sender, EventArgs e)
-        {
-
-        }
         //---------------------------- Direct Sound ------------------------------
         private void btnDirectSoundStart_Click(object sender, EventArgs e)
         {
@@ -135,6 +126,25 @@ namespace up1_karta_dzwiekowa
         {
 
         }
+        //----------------------------- nagrywanie MCI ------------------------------------
+        private void btnStartRecording_Click(object sender, EventArgs e)
+        {
+            string command = "open new type waveaudio alias mic";
+            mciSendString(command, null, 0, IntPtr.Zero);
+            command = "set mic channels 2 samplespersec 44100 bitspersample 16";
+            mciSendString(command, null, 0, IntPtr.Zero);
+            command = "record mic";
+            mciSendString(command, null, 0, IntPtr.Zero);
+        }
 
+        private void btnStopRecording_Click(object sender, EventArgs e)
+        {
+            string command = "stop mic";
+            mciSendString(command, null, 0, IntPtr.Zero);
+            command = "save mic C:\\Users\\aorlo\\Downloads\\nagranie.wav";
+            mciSendString(command, null, 0, IntPtr.Zero);
+            command = "close mic";
+            mciSendString(command, null, 0, IntPtr.Zero);
+        }
     }
 }

@@ -39,8 +39,6 @@
             this.btnMCIStart = new System.Windows.Forms.Button();
             this.btnMCIStop = new System.Windows.Forms.Button();
             this.btnMCIPause = new System.Windows.Forms.Button();
-            this.btnWaveOutStart = new System.Windows.Forms.Button();
-            this.btnWaveOutStop = new System.Windows.Forms.Button();
             this.btnDirectSoundStart = new System.Windows.Forms.Button();
             this.btnDirectSoundStop = new System.Windows.Forms.Button();
             this.btnDirectSoundPause = new System.Windows.Forms.Button();
@@ -48,17 +46,19 @@
             this.labPlaySound = new System.Windows.Forms.Label();
             this.labMCI = new System.Windows.Forms.Label();
             this.labWMP = new System.Windows.Forms.Label();
-            this.labWaveOutWrite = new System.Windows.Forms.Label();
             this.labDirectSound = new System.Windows.Forms.Label();
             this.btnWMPContinue = new System.Windows.Forms.Button();
+            this.btnStartRecording = new System.Windows.Forms.Button();
+            this.btnStopRecording = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.wmpPlayer)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSelectFile
             // 
             this.btnSelectFile.Location = new System.Drawing.Point(13, 12);
+            this.btnSelectFile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSelectFile.Name = "btnSelectFile";
-            this.btnSelectFile.Size = new System.Drawing.Size(274, 33);
+            this.btnSelectFile.Size = new System.Drawing.Size(275, 33);
             this.btnSelectFile.TabIndex = 0;
             this.btnSelectFile.Text = "SELECT FILE";
             this.btnSelectFile.UseVisualStyleBackColor = true;
@@ -67,14 +67,16 @@
             // txtFilePath
             // 
             this.txtFilePath.Location = new System.Drawing.Point(13, 52);
+            this.txtFilePath.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFilePath.Name = "txtFilePath";
-            this.txtFilePath.Size = new System.Drawing.Size(274, 22);
+            this.txtFilePath.Size = new System.Drawing.Size(273, 22);
             this.txtFilePath.TabIndex = 1;
             this.txtFilePath.TextChanged += new System.EventHandler(this.txtFilePath_TextChanged);
             // 
             // btnPlaySoundStart
             // 
-            this.btnPlaySoundStart.Location = new System.Drawing.Point(12, 157);
+            this.btnPlaySoundStart.Location = new System.Drawing.Point(12, 158);
+            this.btnPlaySoundStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlaySoundStart.Name = "btnPlaySoundStart";
             this.btnPlaySoundStart.Size = new System.Drawing.Size(99, 33);
             this.btnPlaySoundStart.TabIndex = 2;
@@ -84,7 +86,8 @@
             // 
             // btnPlaySoundStop
             // 
-            this.btnPlaySoundStop.Location = new System.Drawing.Point(14, 196);
+            this.btnPlaySoundStop.Location = new System.Drawing.Point(13, 196);
+            this.btnPlaySoundStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPlaySoundStop.Name = "btnPlaySoundStop";
             this.btnPlaySoundStop.Size = new System.Drawing.Size(99, 33);
             this.btnPlaySoundStop.TabIndex = 3;
@@ -94,9 +97,10 @@
             // 
             // btnWMPStart
             // 
-            this.btnWMPStart.Location = new System.Drawing.Point(143, 157);
+            this.btnWMPStart.Location = new System.Drawing.Point(143, 158);
+            this.btnWMPStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnWMPStart.Name = "btnWMPStart";
-            this.btnWMPStart.Size = new System.Drawing.Size(129, 33);
+            this.btnWMPStart.Size = new System.Drawing.Size(145, 33);
             this.btnWMPStart.TabIndex = 4;
             this.btnWMPStart.Text = "WMP START";
             this.btnWMPStart.UseVisualStyleBackColor = true;
@@ -105,8 +109,9 @@
             // btnWMPStop
             // 
             this.btnWMPStop.Location = new System.Drawing.Point(143, 196);
+            this.btnWMPStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnWMPStop.Name = "btnWMPStop";
-            this.btnWMPStop.Size = new System.Drawing.Size(129, 33);
+            this.btnWMPStop.Size = new System.Drawing.Size(145, 33);
             this.btnWMPStop.TabIndex = 5;
             this.btnWMPStop.Text = "WMP STOP";
             this.btnWMPStop.UseVisualStyleBackColor = true;
@@ -115,8 +120,9 @@
             // btnWMPPause
             // 
             this.btnWMPPause.Location = new System.Drawing.Point(143, 235);
+            this.btnWMPPause.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnWMPPause.Name = "btnWMPPause";
-            this.btnWMPPause.Size = new System.Drawing.Size(129, 29);
+            this.btnWMPPause.Size = new System.Drawing.Size(145, 30);
             this.btnWMPPause.TabIndex = 6;
             this.btnWMPPause.Text = "WMP PAUSE";
             this.btnWMPPause.UseVisualStyleBackColor = true;
@@ -124,9 +130,10 @@
             // 
             // btnMCIStart
             // 
-            this.btnMCIStart.Location = new System.Drawing.Point(301, 157);
+            this.btnMCIStart.Location = new System.Drawing.Point(301, 158);
+            this.btnMCIStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMCIStart.Name = "btnMCIStart";
-            this.btnMCIStart.Size = new System.Drawing.Size(114, 32);
+            this.btnMCIStart.Size = new System.Drawing.Size(115, 32);
             this.btnMCIStart.TabIndex = 8;
             this.btnMCIStart.Text = "MCI START";
             this.btnMCIStart.UseVisualStyleBackColor = true;
@@ -134,9 +141,10 @@
             // 
             // btnMCIStop
             // 
-            this.btnMCIStop.Location = new System.Drawing.Point(301, 195);
+            this.btnMCIStop.Location = new System.Drawing.Point(301, 194);
+            this.btnMCIStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMCIStop.Name = "btnMCIStop";
-            this.btnMCIStop.Size = new System.Drawing.Size(114, 32);
+            this.btnMCIStop.Size = new System.Drawing.Size(115, 32);
             this.btnMCIStop.TabIndex = 9;
             this.btnMCIStop.Text = "MCI STOP";
             this.btnMCIStop.UseVisualStyleBackColor = true;
@@ -145,36 +153,18 @@
             // btnMCIPause
             // 
             this.btnMCIPause.Location = new System.Drawing.Point(301, 231);
+            this.btnMCIPause.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMCIPause.Name = "btnMCIPause";
-            this.btnMCIPause.Size = new System.Drawing.Size(114, 33);
+            this.btnMCIPause.Size = new System.Drawing.Size(115, 33);
             this.btnMCIPause.TabIndex = 10;
             this.btnMCIPause.Text = "MCI PAUSE";
             this.btnMCIPause.UseVisualStyleBackColor = true;
             this.btnMCIPause.Click += new System.EventHandler(this.btnMCIPause_Click);
             // 
-            // btnWaveOutStart
-            // 
-            this.btnWaveOutStart.Location = new System.Drawing.Point(14, 353);
-            this.btnWaveOutStart.Name = "btnWaveOutStart";
-            this.btnWaveOutStart.Size = new System.Drawing.Size(99, 28);
-            this.btnWaveOutStart.TabIndex = 11;
-            this.btnWaveOutStart.Text = "WV START";
-            this.btnWaveOutStart.UseVisualStyleBackColor = true;
-            this.btnWaveOutStart.Click += new System.EventHandler(this.btnWaveOutStart_Click);
-            // 
-            // btnWaveOutStop
-            // 
-            this.btnWaveOutStop.Location = new System.Drawing.Point(14, 389);
-            this.btnWaveOutStop.Name = "btnWaveOutStop";
-            this.btnWaveOutStop.Size = new System.Drawing.Size(99, 32);
-            this.btnWaveOutStop.TabIndex = 12;
-            this.btnWaveOutStop.Text = "WV STOP";
-            this.btnWaveOutStop.UseVisualStyleBackColor = true;
-            this.btnWaveOutStop.Click += new System.EventHandler(this.btnWaveOutStop_Click);
-            // 
             // btnDirectSoundStart
             // 
             this.btnDirectSoundStart.Location = new System.Drawing.Point(143, 353);
+            this.btnDirectSoundStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectSoundStart.Name = "btnDirectSoundStart";
             this.btnDirectSoundStart.Size = new System.Drawing.Size(129, 28);
             this.btnDirectSoundStart.TabIndex = 13;
@@ -185,6 +175,7 @@
             // btnDirectSoundStop
             // 
             this.btnDirectSoundStop.Location = new System.Drawing.Point(143, 389);
+            this.btnDirectSoundStop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectSoundStop.Name = "btnDirectSoundStop";
             this.btnDirectSoundStop.Size = new System.Drawing.Size(129, 32);
             this.btnDirectSoundStop.TabIndex = 14;
@@ -195,8 +186,9 @@
             // btnDirectSoundPause
             // 
             this.btnDirectSoundPause.Location = new System.Drawing.Point(143, 427);
+            this.btnDirectSoundPause.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDirectSoundPause.Name = "btnDirectSoundPause";
-            this.btnDirectSoundPause.Size = new System.Drawing.Size(129, 29);
+            this.btnDirectSoundPause.Size = new System.Drawing.Size(129, 30);
             this.btnDirectSoundPause.TabIndex = 15;
             this.btnDirectSoundPause.Text = "DS PAUSE";
             this.btnDirectSoundPause.UseVisualStyleBackColor = true;
@@ -205,10 +197,11 @@
             // wmpPlayer
             // 
             this.wmpPlayer.Enabled = true;
-            this.wmpPlayer.Location = new System.Drawing.Point(494, 12);
+            this.wmpPlayer.Location = new System.Drawing.Point(653, 52);
+            this.wmpPlayer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wmpPlayer.Name = "wmpPlayer";
             this.wmpPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("wmpPlayer.OcxState")));
-            this.wmpPlayer.Size = new System.Drawing.Size(741, 515);
+            this.wmpPlayer.Size = new System.Drawing.Size(537, 388);
             this.wmpPlayer.TabIndex = 7;
             // 
             // labPlaySound
@@ -239,15 +232,6 @@
             this.labWMP.TabIndex = 18;
             this.labWMP.Text = "Windows Media Player";
             // 
-            // labWaveOutWrite
-            // 
-            this.labWaveOutWrite.AutoSize = true;
-            this.labWaveOutWrite.Location = new System.Drawing.Point(13, 320);
-            this.labWaveOutWrite.Name = "labWaveOutWrite";
-            this.labWaveOutWrite.Size = new System.Drawing.Size(100, 16);
-            this.labWaveOutWrite.TabIndex = 19;
-            this.labWaveOutWrite.Text = "Wave Out Write";
-            // 
             // labDirectSound
             // 
             this.labDirectSound.AutoSize = true;
@@ -260,29 +244,51 @@
             // btnWMPContinue
             // 
             this.btnWMPContinue.Location = new System.Drawing.Point(143, 270);
+            this.btnWMPContinue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnWMPContinue.Name = "btnWMPContinue";
-            this.btnWMPContinue.Size = new System.Drawing.Size(129, 27);
+            this.btnWMPContinue.Size = new System.Drawing.Size(145, 27);
             this.btnWMPContinue.TabIndex = 21;
             this.btnWMPContinue.Text = "WMP CONTINUE";
             this.btnWMPContinue.UseVisualStyleBackColor = true;
             this.btnWMPContinue.Click += new System.EventHandler(this.btnWMPContinue_Click);
+            // 
+            // btnStartRecording
+            // 
+            this.btnStartRecording.Location = new System.Drawing.Point(335, 353);
+            this.btnStartRecording.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStartRecording.Name = "btnStartRecording";
+            this.btnStartRecording.Size = new System.Drawing.Size(135, 28);
+            this.btnStartRecording.TabIndex = 22;
+            this.btnStartRecording.Text = "Start Recording";
+            this.btnStartRecording.UseVisualStyleBackColor = true;
+            this.btnStartRecording.Click += new System.EventHandler(this.btnStartRecording_Click);
+            // 
+            // btnStopRecording
+            // 
+            this.btnStopRecording.Location = new System.Drawing.Point(335, 391);
+            this.btnStopRecording.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStopRecording.Name = "btnStopRecording";
+            this.btnStopRecording.Size = new System.Drawing.Size(135, 30);
+            this.btnStopRecording.TabIndex = 23;
+            this.btnStopRecording.Text = "Stop Recording";
+            this.btnStopRecording.UseVisualStyleBackColor = true;
+            this.btnStopRecording.Click += new System.EventHandler(this.btnStopRecording_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 539);
+            this.Controls.Add(this.btnStopRecording);
+            this.Controls.Add(this.btnStartRecording);
             this.Controls.Add(this.btnWMPContinue);
             this.Controls.Add(this.labDirectSound);
-            this.Controls.Add(this.labWaveOutWrite);
             this.Controls.Add(this.labWMP);
             this.Controls.Add(this.labMCI);
             this.Controls.Add(this.labPlaySound);
             this.Controls.Add(this.btnDirectSoundPause);
             this.Controls.Add(this.btnDirectSoundStop);
             this.Controls.Add(this.btnDirectSoundStart);
-            this.Controls.Add(this.btnWaveOutStop);
-            this.Controls.Add(this.btnWaveOutStart);
             this.Controls.Add(this.btnMCIPause);
             this.Controls.Add(this.btnMCIStop);
             this.Controls.Add(this.btnMCIStart);
@@ -294,6 +300,7 @@
             this.Controls.Add(this.btnPlaySoundStart);
             this.Controls.Add(this.txtFilePath);
             this.Controls.Add(this.btnSelectFile);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.wmpPlayer)).EndInit();
@@ -315,17 +322,16 @@
         private System.Windows.Forms.Button btnMCIStart;
         private System.Windows.Forms.Button btnMCIStop;
         private System.Windows.Forms.Button btnMCIPause;
-        private System.Windows.Forms.Button btnWaveOutStart;
-        private System.Windows.Forms.Button btnWaveOutStop;
         private System.Windows.Forms.Button btnDirectSoundStart;
         private System.Windows.Forms.Button btnDirectSoundStop;
         private System.Windows.Forms.Button btnDirectSoundPause;
         private System.Windows.Forms.Label labPlaySound;
         private System.Windows.Forms.Label labMCI;
         private System.Windows.Forms.Label labWMP;
-        private System.Windows.Forms.Label labWaveOutWrite;
         private System.Windows.Forms.Label labDirectSound;
         private System.Windows.Forms.Button btnWMPContinue;
+        private System.Windows.Forms.Button btnStartRecording;
+        private System.Windows.Forms.Button btnStopRecording;
     }
 }
 
